@@ -1,0 +1,23 @@
+<h1>Places you've been</h1>
+
+<h4>Where have you gone?:</h4>
+
+<form action="/locations" method="post">
+  <label for="places">Enter a place that you've traveled to:</label>
+  <input id="places" name="places" type="text">
+
+  <button type="submit">Add place</button>
+</form>
+
+<h4>Here are all the places you've been:</h4>
+
+<ul>
+  <% @places.each() do |place| %>
+  <li> <%= place.location() %> </li>
+  <% end %>
+</ul>
+
+
+<form action="/" method="post">
+  <button type="submit">Start over!</button>
+</form>
